@@ -35,9 +35,19 @@ def gemini_prompts(request, prompt):
     model = genai.GenerativeModel('gemini-pro')
     chat = model.start_chat(history=[])
     response_1 = chat.send_message(
-        prompt)
+        "Explain the general claim of this transcript in a paragraph: \n" + prompt)
+    response_2= chat.send_message(
+        "State whether each claim made is true or false")
+    response_3= chat.send_message(
+        "Give 2-3 credible resources on the transcript.")
     
-    return JsonResponse(response_1.text, safe=False)
+    data = {
+        "response_1": response_1.text,
+        "response_2": response_2.text,
+        "response_3": response_3.text
+    }
+    
+    return JsonResponse(data, safe=False)
  
 # def gemini_nlp(request):
 #     if request.method == 'POST' and 'text' in request.POST:

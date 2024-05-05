@@ -3,40 +3,23 @@ import "./styles.css";
 import mic from "../../images/mic.png";
 import { useNavigate } from "react-router-dom";
 
+//   // Event listener for speech recognition results
+//   recognition.onresult = (event) => {
+//     let transcript = "";
+//     for (let i = event.resultIndex; i < event.results.length; i++) {
+//       if (event.results[i].isFinal) {
+//         transcript += event.results[i][0].transcript;
+//       }
+//     }
+//     textInput.value += transcript; // Append transcription to input field
+//   };
+
+//   // Event listener for speech recognition error
+//   recognition.onerror = (event) => {
+//     console.error("Speech recognition error:", event.error);
+//   };
+
 export default function Main() {
-  //   const textInput = document.getElementById("textInput");
-  //   const microphoneButton = document.getElementById("mic");
-
-  //   // Initialize SpeechRecognition object
-  //   const recognition = new webkitSpeechRecognition(); // For Chrome
-  //   recognition.continuous = true;
-  //   recognition.interimResults = true;
-
-  //   // Event listener for microphone button click
-  //   microphoneButton.addEventListener("click", () => {
-  //     if (recognition) {
-  //       recognition.start();
-  //     } else {
-  //       alert("Speech recognition not supported in this browser");
-  //     }
-  //   });
-
-  //   // Event listener for speech recognition results
-  //   recognition.onresult = (event) => {
-  //     let transcript = "";
-  //     for (let i = event.resultIndex; i < event.results.length; i++) {
-  //       if (event.results[i].isFinal) {
-  //         transcript += event.results[i][0].transcript;
-  //       }
-  //     }
-  //     textInput.value += transcript; // Append transcription to input field
-  //   };
-
-  //   // Event listener for speech recognition error
-  //   recognition.onerror = (event) => {
-  //     console.error("Speech recognition error:", event.error);
-  //   };
-
   const navigate = useNavigate();
   const [url, setUrl] = useState();
 

@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=montserrat:wght@400;500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&family=Poppins:wght@400;700&family=Source+Sans+3&display=swap");
+
+:root {
+  --primary-color: rgb(221, 146, 6);
+  --third-color: rgb(41, 34, 34);
+  --secondary-color: rgb(17, 24, 39);
+  --background-color: rgb(255, 254, 248);
+}
+
+.arrow {
+  margin-top: 1.5em;
+  margin-left: 1.5em;
+  cursor: pointer;
+}
+
+body {
+  transition: background-color 0.5s ease;
+  color: var(--secondary-color);
+  background-color: #fffef8;
+  font-family: Kufam;
+}
+
+h3 {
+  color: var(--third-color);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 6em;
+  padding-top: 1.5em;
+}
+
+span {
+  color: var(--primary-color);
+}
+
+.searchcontainer {
+  margin-top: -60px;
+  width: 500px;
+  display: flex;
+  align-items: center;
+  border: solid;
+  border-radius: 1.5em;
+  border-color: var(--primary-color);
+}
+
+.search {
+  border: none;
+  padding: 1em;
+  width: 400px;
+  border-radius: 2em;
+  cursor: none;
+  outline: none;
+}
+
+.microphone {
+  padding: 3px;
+  padding-right: 6px;
+  border: solid 3px;
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: var(--primary-color);
+  border-top-right-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+  margin-left: 27px;
+  padding-left: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.mic-button {
+  border: none;
+  cursor: grab;
+  background-color: var(--primary-color);
+}
+
+.stop-button {
+  padding-right: 7px;
+  cursor: pointer;
+}
+
+.hero {
+  align-items: center;
+  margin-top: 3em;
+  margin-bottom: 1em;
+}
+
+.synopsis .container {
+  display: flex;
+  border: solid;
+  padding: 3em;
+  margin: 0 -3em;
+  margin-top: 3em;
+}
+
+.analysis .container {
+  display: flex;
+  border: solid;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 3em;
+  margin-right: 5em;
+  margin-left: -1em;
+  margin-top: -1em;
+}
+
+.sources .container {
+  display: flex;
+  border: solid;
+  padding: 3em;
+  margin-top: -1em;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  font-family: Kufam;
+  font-weight: 100;
+  margin-left: 5em;
+  margin-right: 5em;
+}
+
+.box {
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-box;
+  -webkit-box-align: start;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-wrap: wrap;
+}
+
+.item {
+  flex-basis: calc(100% - 30px);
+  -ms-flex-preferred-size: calc(100% - 30px);
+  margin: 0 15px 30px;
+  border-radius: 28px;
+  overflow: hidden;
+}
+
+.link {
+  display: block;
+  position: relative;
+  padding: 50px 40px;
+  background-color: var(--secondary-color);
+  overflow: hidden;
+}
+
+.link:hover,
+.link:hover .ai-content {
+  text-decoration: none;
+  color: #fff;
+}
+
+.link:hover .item_bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+
+.title {
+  min-height: 87px;
+  overflow: hidden;
+  font-family: Kufam;
+  margin: 0 0 25px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  z-index: 2;
+  position: relative;
+}
+
+.ai-content {
+  color: var(--background-color);
+  font-weight: bold;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease;
+  -o-transition: color 0.5s ease;
+}
+
+.item_bg {
+  height: 128px;
+  width: 128px;
+  background-color: #f9b234;
+  z-index: 1;
+  top: -75px;
+  right: -75px;
+  position: absolute;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 979px) {
+  .item {
+    -ms-flex-preferred-size: calc(100% - 30px);
+    flex-basis: calc(100% - 30px);
+  }
+  .title {
+    font-size: 24px;
+  }
+}
+
+.ai-content {
+  -webkit-transition: color 0.5s ease;
+  font-weight: lighter;
+  font-size: 0.6em;
+  transition: color 0.5s ease;
+  color: var(--background-color);
+  -o-transition: color 0.5s ease;
+}
