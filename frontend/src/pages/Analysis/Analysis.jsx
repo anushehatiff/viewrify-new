@@ -9,7 +9,8 @@ export default function Analysis() {
         // Make a fetch request to your backend API
         const url = localStorage.getItem("url");
         const response = await fetch(
-          `http://127.0.0.1:8000/api/${url.substring(30)}`
+          // `http://127.0.0.1:8000/api/${url.substring(30)}`
+          `http://127.0.0.1:8000/api/url/${url.substring(30)}`
         );
 
         // Check if the response is successful

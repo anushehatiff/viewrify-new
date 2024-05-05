@@ -3,6 +3,8 @@ from django.http import JsonResponse
 from pytube import YouTube
 import os
 import assemblyai as aai
+import google.generativeai as genai
+import os
 
 def my_json_view(request):
     return JsonResponse("Hello World", safe=False)
@@ -28,6 +30,15 @@ def yt_transcript(request, video_url):
 
     return JsonResponse(transcript.text, safe=False)
 
+def gemini_prompts(request, prompt):
+    genai.configure(api_key='AIzaSyCPVsYti-ppTUluVaoeG7dMTSbOlIkcKOI')
+    model = genai.GenerativeModel('gemini-pro')
+    chat = model.start_chat(history=[])
+    response_1 = chat.send_message(
+        prompt)
+    
+    return JsonResponse(response_1.text, safe=False)
+ 
 # def gemini_nlp(request):
 #     if request.method == 'POST' and 'text' in request.POST:
 #         text = request.POST['text']
